@@ -10,7 +10,8 @@ These instructions will guide you on how to utilize the scripts effectively for 
 
 Before you start using the scripts, make sure you have the following installed:
 
-- Flutter: My scripts are tailored for Flutter projects. [Install Flutter](https://flutter.dev/docs/get-started/install) if you haven't already.
+- Flutter: Is required for some scripts. [Install Flutter](https://flutter.dev/docs/get-started/install) if you haven't already.
+- Git: Git is required for some scripts. [Install Git from](https://git-scm.com/) if you haven't already.
 - Bash: The scripts are written for Bash shell. Most Unix-like systems have this installed by default.
 
 ### Important Note
@@ -118,17 +119,32 @@ If you've installed the script globally:
    **Arguments**:
     - `package_name`: The desired name for your Flutter package. Provide a unique name for the script to create a new Flutter package in the current directory.
 ---
-2. **flutter_new_release**: 
+2. **git_new_release**: 
 
    Create a new release branch
    This script automates the process of creating a new release branch from your project's main branch. It ensures you are working with the latest main branch, creates a new release branch with a name you provide, and then pushes this new branch to your remote repository. The script includes enhanced messaging to inform you of the progress and robust error handling to manage any issues that might arise during the process.
    
-   **Ensure you are in the correct directory within your Flutter project and have the necessary permissions for the repository before running this script.**
+   **Ensure you are in the correct directory within your project and have the necessary permissions for the repository before running this script.**
 
-   **Usage**: `./flutter_new_release.sh release_name`
+   **Usage**: `./git_new_release.sh release_name`
    
    **Arguments**:
     - `release_name`: The desired name for your release branch. Provide a unique name for the script to create a new release branch from the main branch in your repository.
+---
+3. **delete_local_branches**:
+
+   Delete local branches not present on the remote
+   This script automates the process of deleting local branches that do not have a corresponding remote branch on the origin. It fetches the latest branches from the origin, checks each local branch, and offers an interactive prompt to delete branches individually or all at once. The script includes enhanced messaging to inform you of the progress and robust error handling to manage any issues that might arise during the process.
+
+   **Ensure you have committed any important changes and are in the correct directory of your Git repository before running this script. It is recommended to perform a backup of important branches.**
+
+   **Usage**: `./delete_local_branches.sh`
+   
+   **Interactive Options**:
+    - `y`: Confirm the deletion of the current branch.
+    - `n`: Skip the deletion of the current branch.
+    - `All`: Delete all remaining branches without further confirmation.
+
 <!-- Additional script details can be added here -->
 
 ---
