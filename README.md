@@ -108,14 +108,27 @@ If you've installed the script globally:
 
 ### Available Scripts
 
-1. **Script 1**: Create a new Flutter package
+1. **flutter_create_package**: 
+
+   Create a new Flutter package
    This script automates the process of creating a new Flutter package within the specified directory in your project. It sets up essential directories like 'screenshots', and files like 'README.md' and 'CHANGELOG.md'. The script ensures the package name is unique and adds the package dependency to the example's 'pubspec.yaml'. It also provides robust error handling to roll back changes if the process fails at any point. **Ensure you are in the correct directory within your Flutter project before running this script.**
 
    **Usage**: `./flutter_create_package.sh package_name`
    
    **Arguments**:
     - `package_name`: The desired name for your Flutter package. Provide a unique name for the script to create a new Flutter package in the current directory.
+---
+2. **flutter_new_release**: 
 
+   Create a new release branch
+   This script automates the process of creating a new release branch from your project's main branch. It ensures you are working with the latest main branch, creates a new release branch with a name you provide, and then pushes this new branch to your remote repository. The script includes enhanced messaging to inform you of the progress and robust error handling to manage any issues that might arise during the process.
+   
+   **Ensure you are in the correct directory within your Flutter project and have the necessary permissions for the repository before running this script.**
+
+   **Usage**: `./flutter_new_release.sh release_name`
+   
+   **Arguments**:
+    - `release_name`: The desired name for your release branch. Provide a unique name for the script to create a new release branch from the main branch in your repository.
 <!-- Additional script details can be added here -->
 
 ---
