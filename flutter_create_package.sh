@@ -71,8 +71,6 @@ cd ..
 
 # Add the package dependency to the example's pubspec.yaml.
 sed -i '' "/dependencies:/a\\
-  flutter:\\
-    sdk: flutter\\
   $name:\\
     # When depending on this package from a real application you should use:\\
     #   $name: ^x.y.z\\
